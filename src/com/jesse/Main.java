@@ -14,6 +14,10 @@ public class Main {
         Scanner wordScanner = new Scanner(engmix);
 
         ArrayList<String> words = new ArrayList<>();
+        while(wordScanner.hasNextLine()) {
+            words.add(wordScanner.nextLine());
+        }
+        Scanner input = new Scanner(System.in);
 
     }
 }
