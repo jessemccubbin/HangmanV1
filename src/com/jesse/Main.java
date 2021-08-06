@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        File engmix = new File("C:\\Users\\UST-User\\Desktop\\HangmanV1\\src\\com\\jesse\\engmix.txt");
+        File engmix = new File("engmix.txt");
 
         Scanner wordScanner = new Scanner(engmix);
 
@@ -18,6 +18,9 @@ public class Main {
             words.add(wordScanner.nextLine());
         }
         Scanner input = new Scanner(System.in);
+
+        String secretChars = words.get((int)(Math.random() * words.size()));
+        char[] wordList = secretChars.toCharArray();
 
     }
 }
