@@ -22,5 +22,6 @@ public class Main {
         String secretChars = words.get((int)(Math.random() * words.size()));
         char[] wordList = secretChars.toCharArray();
 
+
     }
 }
