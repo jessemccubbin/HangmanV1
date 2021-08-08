@@ -22,6 +22,10 @@ public class Main {
         String secretChars = words.get((int)(Math.random() * words.size()));
         char[] wordList = secretChars.toCharArray();
 
+        char[] guesses = new char[wordList.length];
+        for(int i = 0; i < wordList.length; i++) {
+            guesses[i] = '?';
+        }
 
     }
 }
