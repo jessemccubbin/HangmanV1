@@ -71,6 +71,7 @@ public class Main {
 
             if(lives < 0) {
                 System.out.println("You lost");
+                finished = true;
             }
         }
     }
