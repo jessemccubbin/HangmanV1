@@ -26,6 +26,17 @@ public class Main {
         for(int i = 0; i < wordList.length; i++) {
             guesses[i] = '?';
         }
+        boolean finished = false;
+        while(true) {
+            System.out.println("~~~~~~~~~~~~~~~~~~");
+
+            String letter = input.next();
+
+            while(letter.length() != 1 || Character.isDigit(letter.charAt(0))) {
+                System.out.println("Wrong input, please try again");
+                letter = input.next();
+            }
+        }
 
     }
 }
