@@ -29,7 +29,7 @@ public class Main {
         boolean finished = false;
         int lives = 6;
 
-        while (true) {
+        while (!finished) {
             System.out.println("~~~~~~~~~~~~~~~~~~");
 
             String letter = input.next();
