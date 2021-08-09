@@ -10,9 +10,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         File engmix = new File("C:\\Users\\UST-User\\Desktop\\HangmanV1\\src\\com\\jesse\\engmix.txt");
-
         Scanner wordScanner = new Scanner(engmix);
-
         ArrayList<String> words = new ArrayList<>();
         while (wordScanner.hasNextLine()) {
             words.add(wordScanner.nextLine());
@@ -27,19 +25,17 @@ public class Main {
             guesses[i] = '?';
         }
         boolean finished = false;
-        int lives = 6;
+        int lives = 20;
 
         while (!finished) {
-            System.out.println("~~~~~~~~~~~~~~~~~~");
-
             String letter = input.next();
-
             while (letter.length() != 1 || Character.isDigit(letter.charAt(0))) {
                 System.out.println("Wrong input, please try again");
                 letter = input.next();
             }
 
             boolean found = false;
+
             for (int i = 0; i < wordList.length; i++) {
                 if (letter.charAt(0) == wordList[i]) {
                     guesses[i] = wordList[i];
@@ -49,28 +45,27 @@ public class Main {
 
             if (!found) {
                 lives--;
-
                 System.out.println("Wrong letter");
             }
 
             boolean done = true;
+
             for (char guess : guesses) {
                 if (guess == '?') {
-                    System.out.println(" _");
+                    System.out.print(" _");
                     done = false;
                 } else {
                     System.out.println(" " + guess);
                 }
             }
             System.out.println("\n" + "Lives left: " + lives);
-
-            if(done) {
-                System.out.println("Finished");
+            if (done) {
+                System.out.println("Congrats you finished, your word was " + secretChars + ". Great game!");
                 finished = true;
             }
 
-            if(lives < 0) {
-                System.out.println("You lost");
+            if (lives < 0) {
+                System.out.println("You lost, your word was " + secretChars + ". Better luck next time");
                 finished = true;
             }
         }
