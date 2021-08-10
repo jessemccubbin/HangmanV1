@@ -55,7 +55,7 @@ public class Main {
                     System.out.print(" _");
                     done = false;
                 } else {
-                    System.out.println(" " + guess);
+                    System.out.print(" " + guess);
                 }
             }
             System.out.println("\n" + "Lives left: " + lives);
