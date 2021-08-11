@@ -1,7 +1,7 @@
 package com.jesse;
 
-public class hangmanVisualiser {
-    public static void drawHangman(int l) {
+public class HangmanVisualiser {
+    public static void hangmanGame(int l) {
         if(l == 8) {
             System.out.println("|");
             System.out.println("|");
